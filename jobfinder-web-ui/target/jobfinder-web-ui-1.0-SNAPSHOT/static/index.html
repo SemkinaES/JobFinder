@@ -1,0 +1,41 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/css/angular-material.min.css">
+    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/lib/angular-animate.min.js"></script>
+    <script src="/js/lib/angular-route.min.js"></script>
+    <script src="/js/lib/angular-aria.min.js"></script>
+    <script src="/js/lib/angular-messages.min.js"></script>
+    <script src="/js/lib/angular-material.min.js"></script>
+
+
+    <script src="/js/route/mainRoute.js"></script>
+
+    <!-- controller -->
+    <script src="/js/controller/index.js"></script>
+    <!--<script src="/js/controller/login.js"></script>-->
+    <!--<script src="/js/controller/main.js"></script>-->
+
+
+</head>
+<body>
+<div ng-app="JobFinder" layout="column" layout-fill ng-controller="indexController">
+    <header>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button href="/#/" layout="row"><p>Job Finder</p></md-button>
+                <!-- fill up the space between left and right area -->
+                <span flex></span>
+                <md-button ng-show="!isAuthorizated" href="/#/login"><p>login</p></md-button>
+                <md-button ng-click="logout()" ng-show="isAuthorizated"><p>logout</p></md-button>
+            </div>
+        </md-toolbar>
+    </header>
+    <main flex style="height: inherit">
+        <md-content style="height: inherit">
+            <div class="content" ng-view/>
+        </md-content>
+    </main>
+</div>
+</body>
+</html>

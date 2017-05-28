@@ -1,0 +1,20 @@
+<div ng-controller="loginController">
+    <div ng-cloak>
+        <md-content layout="column" layout-align="start center">
+            <H3>Put your login and password</H3>
+            <md-input-container>
+                <label>Login</label>
+                <input ng-model="username">
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input ng-model="password">
+            </md-input-container>
+            <div>
+                <md-button ng-click="signIn()"><p>Sign in</p></md-button>
+                <md-button ng-click="signUp()"><p>Sign up</p></md-button>
+            </div>
+
+        </md-content>
+    </div>
+</div>
