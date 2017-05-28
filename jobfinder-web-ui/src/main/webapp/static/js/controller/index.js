@@ -50,9 +50,10 @@ app.controller('registerController',  function ($http, $scope, $rootScope, $loca
                         "city": $scope.city,
                         "email": $scope.email,
                         "login": $scope.username,
-                        "password": $scope.password
+                        "password": $scope.password,
+                        "queries":[]
                      };
-        $http.post('/api/client/auth', client)
+        $http.post('/api/client', client)
             .then(function (response) {
                    if (response.data.status == 'OK') {
                         $rootScope.signIn($scope.username, $scope.password);
@@ -75,7 +76,9 @@ app.controller('mainController',  function ($http, $scope, $rootScope, $location
         $scope.email = $rootScope.client.email;
         $scope.username = $rootScope.client.login;
         $scope.password = $rootScope.client.password;
-        $scope.queries = $rootScope.client.queries;
+        if ($rootScope.client.queries != null) {
+            $scope.queries = $rootScope.client.queries;
+        }
     }
 
     $scope.save = function () {
