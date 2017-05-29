@@ -5,9 +5,6 @@ import org.apache.camel.Processor;
 
 import java.util.HashMap;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class ResultProcessor implements Processor {
 
     @Override

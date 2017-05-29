@@ -9,9 +9,6 @@ import ru.esemkina.jobfinder.web.ui.simple.entity.Client;
 
 import java.util.Map;
 
-/**
- * Created by Kate on 27.05.2017.
- */
 public class ClientManager {
 
     @Autowired
@@ -38,6 +35,7 @@ public class ClientManager {
 
         datastore.update(selectUser, updateUser);
     }
+
     public Map get(String login, String password) {
         Query<Client> selectUser = datastore.createQuery(Client.class)
                 .field("password")

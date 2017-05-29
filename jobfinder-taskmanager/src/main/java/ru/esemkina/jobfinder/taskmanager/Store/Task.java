@@ -1,8 +1,5 @@
 package ru.esemkina.jobfinder.taskmanager.Store;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class Task {
     private String query;
     private String city;

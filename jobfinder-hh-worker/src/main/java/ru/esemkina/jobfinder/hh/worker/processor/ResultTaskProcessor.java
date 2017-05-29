@@ -14,9 +14,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class ResultTaskProcessor implements Processor {
     @Autowired
     private Datastore dataStore;

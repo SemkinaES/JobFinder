@@ -13,9 +13,6 @@ import java.util.Map;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
-/**
- * Created by Kate on 27.05.2017.
- */
 @RestController
 public class ClientService {
 
