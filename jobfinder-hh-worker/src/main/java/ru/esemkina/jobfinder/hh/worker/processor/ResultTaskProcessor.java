@@ -7,12 +7,11 @@ import org.mongodb.morphia.query.Query;
 import org.mongodb.morphia.query.UpdateOperations;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.esemkina.jobfinder.hh.worker.Store.Task;
+import ru.esemkina.jobfinder.hh.worker.Store.Vacancy;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -21,6 +20,21 @@ import java.util.*;
 public class ResultTaskProcessor implements Processor {
     @Autowired
     private Datastore dataStore;
+
+    private Vacancy vacancyCreator(Map map) {
+        Vacancy vacancy = new Vacancy();
+        vacancy.setName((String) map.get("name"));
+        Map snippet = (Map) map.get("snippet");
+        vacancy.setResponsibility((String) snippet.get("responsibility"));
+        vacancy.setRequirement((String) snippet.get("requirement"));
+        Map area = (Map) map.get("area");
+        vacancy.setCity((String) area.get("name"));
+        vacancy.setUrl((String) map.get("alternate_url"));
+        vacancy.setCreatedAt((String) map.get("created_at"));
+        Map employer = (Map) map.get("employer");
+        vacancy.setEmployerName((String) employer.get("name"));
+        return vacancy;
+    }
 
     @Override
     public void process(Exchange exchange) throws Exception {
@@ -44,7 +58,7 @@ public class ResultTaskProcessor implements Processor {
         } else {
             Task storedTask = tasks.get(0);
             Date maxDate = storedTask.getDate();
-            List<Map> newTasks = new ArrayList<>();
+            List<Vacancy> newTasks = new ArrayList<>();
             HashMap body = exchange.getIn().getBody(HashMap.class);
             List<Map> items = (List) body.get("items");
 
@@ -60,7 +74,7 @@ public class ResultTaskProcessor implements Processor {
                 }
 
                 if (itemDate.after(storedTask.getDate())) {
-                    newTasks.add(x);
+                    newTasks.add(vacancyCreator(x));
                     if (itemDate.after(maxDate)) {
                         maxDate = itemDate;
                     }
