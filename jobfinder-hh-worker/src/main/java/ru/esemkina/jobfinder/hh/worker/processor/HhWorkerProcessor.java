@@ -9,10 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import ru.esemkina.jobfinder.hh.worker.CityManager;
 import ru.esemkina.jobfinder.hh.worker.Store.Task;
 
-/**
- * Created by Kate on 28.05.2017.
- */
-
 public class HhWorkerProcessor implements Processor {
     @Autowired
     private Datastore datastore;

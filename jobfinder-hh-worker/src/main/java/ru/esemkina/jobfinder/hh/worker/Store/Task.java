@@ -4,9 +4,6 @@ import org.mongodb.morphia.annotations.Entity;
 
 import java.util.Date;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 @Entity("tasks")
 public class Task {
     private String query;

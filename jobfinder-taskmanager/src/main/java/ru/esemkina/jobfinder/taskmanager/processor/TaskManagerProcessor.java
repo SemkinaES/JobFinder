@@ -10,9 +10,6 @@ import ru.esemkina.jobfinder.taskmanager.Store.Task;
 import java.util.HashSet;
 import java.util.List;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 
 public class TaskManagerProcessor implements Processor {
     @Autowired

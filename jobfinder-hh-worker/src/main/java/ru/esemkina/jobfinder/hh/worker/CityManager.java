@@ -6,9 +6,6 @@ import ru.esemkina.jobfinder.hh.worker.Store.City;
 
 import java.util.List;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class CityManager {
 
     @Autowired

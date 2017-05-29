@@ -3,7 +3,6 @@ package ru.esemkina.jobfinder.notifier.processor;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.mongodb.morphia.Datastore;
-import org.mongodb.morphia.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.esemkina.jobfinder.web.ui.simple.entity.Client;
 
@@ -12,9 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class FindClientProcessor implements Processor {
     @Autowired
     public Datastore datastore;

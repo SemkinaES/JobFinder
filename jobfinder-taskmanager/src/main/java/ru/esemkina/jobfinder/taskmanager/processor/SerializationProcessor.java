@@ -6,9 +6,6 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import ru.esemkina.jobfinder.taskmanager.Store.Task;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class SerializationProcessor implements Processor {
 
     @Override

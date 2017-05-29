@@ -5,9 +5,6 @@ import com.google.gson.GsonBuilder;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class SerializationProcessor implements Processor {
 
     @Override

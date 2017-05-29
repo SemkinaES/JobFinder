@@ -8,9 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class HtmlCreatorProcessor implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {

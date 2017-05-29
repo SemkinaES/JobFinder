@@ -1,8 +1,5 @@
 package ru.esemkina.jobfinder.hh.worker.Store;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 public class Vacancy {
     private String name;
     private String city;

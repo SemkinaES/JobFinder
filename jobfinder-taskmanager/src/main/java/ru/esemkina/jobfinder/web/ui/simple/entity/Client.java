@@ -4,9 +4,6 @@ import org.mongodb.morphia.annotations.Entity;
 
 import java.util.List;
 
-/**
- * Created by Kate on 28.05.2017.
- */
 @Entity("clients")
 public class Client {
     private String name;
