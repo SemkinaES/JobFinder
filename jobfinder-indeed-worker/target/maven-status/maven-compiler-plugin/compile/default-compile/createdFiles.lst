@@ -1,0 +1,10 @@
+ru\esemkina\jobfinder\indeed\worker\IndeedWorkerRouter.class
+ru\esemkina\jobfinder\indeed\worker\Store\Vacancy.class
+ru\esemkina\jobfinder\indeed\worker\IndeedWorkerStart.class
+ru\esemkina\jobfinder\indeed\worker\processor\DeserializationProcessor.class
+ru\esemkina\jobfinder\indeed\worker\Store\Task.class
+ru\esemkina\jobfinder\indeed\worker\processor\ResultTaskProcessor.class
+ru\esemkina\jobfinder\indeed\worker\text.class
+ru\esemkina\jobfinder\indeed\worker\processor\IndeedWorkerProcessor.class
+ru\esemkina\jobfinder\indeed\worker\processor\ResultProcessor.class
+ru\esemkina\jobfinder\indeed\worker\processor\SerializationProcessor.class
