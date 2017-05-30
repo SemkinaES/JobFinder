@@ -21,7 +21,7 @@ public class IndeedWorkerRouter extends RouteBuilder {
 
     @Override
     public void configure() {
-        from("activemq:queue://tasks" +
+        from("activemq:topic://tasks" +
                 "?username=admin" +
                 "&password=admin" +
                 "&disableReplyTo=true")

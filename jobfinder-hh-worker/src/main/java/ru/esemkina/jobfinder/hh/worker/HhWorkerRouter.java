@@ -24,7 +24,7 @@ public class HhWorkerRouter extends RouteBuilder {
     @Override
     public void configure() {
         cityManager.init();
-        from("activemq:queue://tasks" +
+        from("activemq:topic://tasks" +
                 "?username=admin" +
                 "&password=admin" +
                 "&disableReplyTo=true")

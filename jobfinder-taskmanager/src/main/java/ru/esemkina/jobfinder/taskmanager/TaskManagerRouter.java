@@ -18,7 +18,7 @@ public class TaskManagerRouter extends RouteBuilder {
                 .process(taskManagerProcessor)
                 .split(body())
                 .process(new SerializationProcessor())
-                .to("activemq:queue://tasks" +
+                .to("activemq:topic://tasks" +
                         "?username=admin" +
                         "&password=admin" +
                         "&disableReplyTo=true");
