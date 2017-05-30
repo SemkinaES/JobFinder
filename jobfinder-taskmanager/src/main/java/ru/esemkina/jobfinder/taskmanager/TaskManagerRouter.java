@@ -14,7 +14,7 @@ public class TaskManagerRouter extends RouteBuilder {
 
     @Override
     public void configure() {
-        from("quartz2://taskcreator?cron=0+*/1+*+*+*+?")
+        from("quartz2://taskcreator?cron=0+*/2+*+*+*+?")
                 .process(taskManagerProcessor)
                 .split(body())
                 .process(new SerializationProcessor())
