@@ -13,7 +13,6 @@ public class EmailMessageProcessor implements Processor {
         Map<String, Object> headers = new HashMap<String, Object>();
 
         Client client = (Client) exchange.getProperty("client");
-
         //mail headers
         headers.put("To", client.getEmail());
         headers.put("From", "job.finder.application@gmail.com");
